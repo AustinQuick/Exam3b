@@ -1,0 +1,13 @@
+#Body{text-align:left;}
+
+#Header{text-align:center;}
+
+#lCol{border: 1px solid black; float: left; position: absolute; top: 150px; width: 15%; left: 10%; height: 60px;}
+
+#rCol{border: 1px solid black; float: right; position: absolute; top: 150px; width: 375px; left: 35%; height: 700px;}
+
+#rText{text-align:center}
+
+h1{     text-align:center;
+		font-weight:bold;
+		font-size: 32px;}

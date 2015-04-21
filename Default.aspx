@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css" />
 <head runat="server">
     <title>Multi-Lingual Webpage</title>
 </head>
@@ -10,7 +11,7 @@
     <form id="form1" runat="server">
 
     <div id="Body">
-        <div id="Header"
+        <div id="Header">
             <h1>
                 <asp:Label ID="Label1" runat="server" Text="Welcome to"></asp:Label>&nbsp MSCI:3300
             </h1>
@@ -38,31 +39,36 @@
 
     <div id ="rCol">
 
-        <asp:Label ID="nameLbl" runat="server" Text="My name is:"></asp:Label> &nbsp <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
-            &nbsp&nbsp<asp:RequiredFieldValidator ID="nameVal" runat="server" ControlToValidate="Textbox1" Font-Italic="True" ForeColor="Red" ErrorMessage="Please enter your name!"></asp:RequiredFieldValidator> 
+        <div id ="rText">
 
+        <asp:Label ID="nameLbl" runat="server" Text="My name is:"></asp:Label> &nbsp <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox> 
+            
+        </div>
 
         <br /><br /><br />
 
-        <asp:Label ID="genderLbl" runat="server" Text="I am:"></asp:Label><asp:RadioButtonList ID="genderRButton" runat="server">
+        <div id ="rText">
+        <asp:Label ID="genderLbl" runat="server" Text="Gender:"></asp:Label>
+        <div id ="rText">
+        
+        <asp:RadioButtonList ID="genderRButton" runat="server" RepeatDirection="Horizontal" RepeatLayout="Flow">
             <asp:ListItem Value="0">Male</asp:ListItem>
             <asp:ListItem Value="1">Female</asp:ListItem>
         </asp:RadioButtonList>
-        <asp:RequiredFieldValidator ID="genderVal" runat="server" ControlToValidate="genderRButton" ErrorMessage="Please select a Gender!" Font-Italic="True" ForeColor="Red"></asp:RequiredFieldValidator> 
-
+       
  
 
 
-
+    <div id ="rText">
         <br /><br />
 
         <asp:Label ID="Label4" runat="server" Text="I plan to graduate on:"></asp:Label>
-         &nbsp&nbsp<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="Calendar1" Font-Italic="True" ForeColor="Red" ErrorMessage="Please select a date!"></asp:RequiredFieldValidator>
+         
 
         <br /><br />
 
      
-        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" CaptionAlign="Left">
+        <asp:Calendar ID="Calendar1" runat="server" BackColor="White" BorderColor="White" BorderWidth="1px" Font-Names="Verdana" Font-Size="9pt" ForeColor="Black" Height="190px" NextPrevFormat="FullMonth" Width="350px" CaptionAlign="Left" CellPadding="10" CellSpacing="9">
             <DayHeaderStyle Font-Bold="True" Font-Size="8pt" />
             <NextPrevStyle Font-Bold="True" Font-Size="8pt" ForeColor="#333333" VerticalAlign="Bottom" />
             <OtherMonthDayStyle ForeColor="#999999" />
@@ -74,13 +80,13 @@
         <br /><br />
 
         <asp:Label ID="incomeLbl" runat="server" Text="When I graduate, I hope to earn:"></asp:Label> &nbsp&nbsp <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-         &nbsp&nbsp<asp:RequiredFieldValidator ID="incomeVal" runat="server" ControlToValidate="incomeLbl" Font-Italic="True" ForeColor="Red" ErrorMessage="Please input an income!"></asp:RequiredFieldValidator>
-            
+         
         <br /><br />
 
 
         <asp:Button ID="Button1" runat="server" Text="Submit" />
         </div>
+    </div>
     </div>
         
     </form>
